@@ -1,7 +1,7 @@
 import got from 'got';
 import { map, pipe } from 'iter-ops';
 
-let page = 1;
+const page = 1;
 const perPage = 80;
 
 interface Beer {
@@ -13,16 +13,21 @@ const pagination = got.paginate<Beer>(
   `https://api.punkapi.com/v2/beers?page=${page}&per_page=${perPage}`,
   {
     pagination: {
-      paginate: ({ currentItems }) => {
-        const next = currentItems.length > 0;
+      paginate: ({
+        currentItems,
+        response: {
+          requestUrl: { searchParams },
+        },
+      }) => {
+        const more = currentItems.length > 0;
 
-        if (next) {
-          page++;
+        if (more) {
+          const page = searchParams.get('page') ?? '1';
+          const next = +page + 1;
 
           return {
             url: new URL(
-              `v2/beers?page=${page}&per_page=${perPage}`,
-              'https://api.punkapi.com'
+              `https://api.punkapi.com/v2/beers?page=${next}&per_page=${perPage}`
             ),
           };
         }
@@ -33,18 +38,15 @@ const pagination = got.paginate<Beer>(
   }
 );
 
+const foo = pipe(
+  pagination,
+  map(({ id, name }) => ({ id, name, foo: 'bar' }))
+);
+
 const beers: Beer[] = [];
-for await (const beer of pagination) {
+for await (const beer of foo) {
   beers.push(beer);
 }
 
-const foo = pipe(
-  pagination,
-  map((beer) => beer)
-);
-
 // eslint-disable-next-line no-console
 console.log(beers.length);
-
-// eslint-disable-next-line no-console
-console.log(foo);
