@@ -1,5 +1,5 @@
 {
-  "name": "got-playground",
+  "name": "http-request-playground",
   "type": "module",
   "version": "0.0.0",
   "scripts": {
