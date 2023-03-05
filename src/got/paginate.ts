@@ -13,13 +13,6 @@ const pagination = got.paginate<Beer>(
   `https://api.punkapi.com/v2/beers?page=${page}&per_page=${perPage}`,
   {
     pagination: {
-      //   transform: (response: Response) => {
-      //     if (response.request.options.responseType === 'json') {
-      //       return response.body;
-      //     }
-
-      //     return JSON.parse(response.body as string);
-      //   },
       paginate: ({ currentItems }) => {
         const next = currentItems.length > 0;
 
@@ -36,12 +29,6 @@ const pagination = got.paginate<Beer>(
 
         return false;
       },
-      //   filter: () => true,
-      //   shouldContinue: () => true,
-      //   countLimit: Number.POSITIVE_INFINITY,
-      //   backoff: 0,
-      //   requestLimit: 10_000,
-      //   stackAllItems: false,
     },
   }
 );

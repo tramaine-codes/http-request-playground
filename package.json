@@ -5,7 +5,6 @@
   "scripts": {
     "build": "npm run clean && npm test && tsc",
     "clean": "del-cli lib",
-    "bundle": "npm run build && serverless package",
     "format": "prettier . --write",
     "lint": "eslint . --ext .js,.ts",
     "lint:fix": "eslint . --ext .js,.ts --fix",
@@ -27,7 +26,6 @@
     "husky": "8.0.3",
     "lint-staged": "13.1.2",
     "prettier": "2.8.4",
-    "tsup": "6.6.3",
     "tsx": "3.12.3",
     "typescript": "4.9.5",
     "vitest": "0.29.2"
