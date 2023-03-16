@@ -17,22 +17,22 @@
   "devDependencies": {
     "@commitlint/cli": "17.4.4",
     "@commitlint/config-conventional": "17.4.4",
-    "@types/node": "18.15.0",
-    "@typescript-eslint/eslint-plugin": "5.54.1",
-    "@typescript-eslint/parser": "5.54.1",
-    "@vitest/coverage-c8": "0.29.2",
+    "@types/node": "18.15.3",
+    "@typescript-eslint/eslint-plugin": "5.55.0",
+    "@typescript-eslint/parser": "5.55.0",
+    "@vitest/coverage-c8": "0.29.3",
     "del-cli": "5.0.0",
     "eslint": "8.36.0",
     "husky": "8.0.3",
     "lint-staged": "13.2.0",
     "prettier": "2.8.4",
-    "tsx": "3.12.3",
-    "typescript": "4.9.5",
-    "vitest": "0.29.2"
+    "tsx": "3.12.5",
+    "typescript": "5.0.2",
+    "vitest": "0.29.3"
   },
   "dependencies": {
     "got": "12.6.0",
     "iter-ops": "3.0.7",
-    "ky": "0.33.2"
+    "ky": "0.33.3"
   }
 }
