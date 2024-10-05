@@ -1,25 +1,25 @@
 {
   "author": "Tramaine L. Gillus",
   "devDependencies": {
-    "@commitlint/cli": "19.4.0",
-    "@commitlint/config-conventional": "19.2.2",
-    "@types/node": "20.14.8",
-    "@typescript-eslint/eslint-plugin": "8.1.0",
-    "@typescript-eslint/parser": "8.1.0",
-    "@vitest/coverage-v8": "2.0.5",
+    "@commitlint/cli": "19.5.0",
+    "@commitlint/config-conventional": "19.5.0",
+    "@types/node": "20.16.10",
+    "@typescript-eslint/eslint-plugin": "8.8.0",
+    "@typescript-eslint/parser": "8.8.0",
+    "@vitest/coverage-v8": "2.1.2",
     "del-cli": "5.1.0",
-    "eslint": "8.57.0",
-    "husky": "9.1.4",
-    "lint-staged": "15.2.9",
+    "eslint": "8.57.1",
+    "husky": "9.1.6",
+    "lint-staged": "15.2.10",
     "prettier": "3.3.3",
-    "tsx": "4.17.0",
-    "typescript": "5.5.4",
-    "vitest": "2.0.5"
+    "tsx": "4.19.1",
+    "typescript": "5.6.2",
+    "vitest": "2.1.2"
   },
   "dependencies": {
     "got": "14.4.2",
     "iter-ops": "3.5.0",
-    "ky": "1.7.0"
+    "ky": "1.7.2"
   },
   "license": "ISC",
   "name": "http-request-playground",
