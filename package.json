@@ -3,7 +3,7 @@
   "devDependencies": {
     "@commitlint/cli": "19.6.1",
     "@commitlint/config-conventional": "19.6.0",
-    "@types/node": "22.10.2",
+    "@types/node": "22.10.3",
     "@vitest/coverage-v8": "2.1.8",
     "del-cli": "6.0.0",
     "eslint": "9.17.0",
@@ -21,7 +21,7 @@
     "got": "14.4.5",
     "iter-ops": "3.5.0",
     "ky": "1.7.4",
-    "typescript-eslint": "8.18.2"
+    "typescript-eslint": "8.19.0"
   },
   "license": "ISC",
   "name": "http-request-playground",
